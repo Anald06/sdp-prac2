@@ -7,4 +7,33 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
 
 class AppTest {
+        
+    @Test void Task2testRemove1Char() {
+    // Arrange
+    SimpleFunctions testSample = new SimpleFunctions();
+    
+    List<String> data = Arrays.asList("hi","car",".pc","jack","Prac2",);
+    List<String> expected = Arrays.asList("i","ar","pc","ack","rac2");
+    // Act
+    List<String> result = SimpleFunctions.Task2(data);
+    // Assert
+    assertIterableEquals(expected, result); 
+
+    }
+
+    @Test void Task2testRemove0strings() {
+        
+        // Arrange
+        SimpleFunctions testSample = new SimpleFunctions();
+    
+        List<String> data = Arrays.asList("","car",".pc","","Prac2",);
+        List<String> expected = Arrays.asList(,"ar","pc","rac2");
+        // Act
+        List<String> result = SimpleFunctions.Task2(data);
+        // Assert
+        assertIterableEquals(expected, result); 
+
+    }
+
+
 }
