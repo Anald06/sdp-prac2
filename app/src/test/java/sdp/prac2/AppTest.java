@@ -5,6 +5,38 @@ package sdp.prac2;
 
 import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
+import java.util.*;
 
 class AppTest {
+
+    //This is a test for Task 4 ::: Written by Ahmed Kobue (g19k0734)
+    public void testTask4(){
+
+        // Arrange 
+        SimpleFunctions testing = new SimpleFunctions();
+        List<Integer> listA = new ArrayList<Integer>() {{
+            add(1);
+            add(2);
+            add(3);
+        }};
+        List<Integer> listB = new ArrayList<Integer>() {{
+            add(3);
+            add(2);
+            add(1);
+        }};
+
+        List<Integer> expected = new ArrayList<Integer>() {{
+            add(1);
+            add(4);
+            add(9);
+        }};
+
+        // Act
+        List<Integer> result = testing.task4(listA,listB);
+        
+
+        // Assert
+        assertEquals(expected,result);
+    }
 }
+
