@@ -8,6 +8,39 @@ import static org.junit.jupiter.api.Assertions.*;
 import java.util.*;
 
 class AppTest {
+    // tester by mduduzi ndlovu
+    @Test void testTask1()
+    // Arrange
+    {
+        SimpleFunctions testing =new SimpleFunctions();
+        List<Integer> listA =new List<Integer>()
+        {
+            add(1);   
+            add(2); 
+            add(3); 
+            add(4);
+            add(5); 
+        };
+        List<Integer> listA =new List<Integer>()
+        {
+            add(1);
+            add(2);
+            add(3);
+        };
+        List<Integer> expected = new ArrayList<Integer>() {
+            add(3);
+            add(5);
+            add(7);
+        };
+
+        // Act
+        List<Integer> result = testing.task4(listA,listB);
+        
+
+        // Assert
+        assertEquals(expected,result);
+
+    }
 
     //This is a test for Task 4 ::: Written by Ahmed Kobue (g19k0734)
     public void testTask4(){
